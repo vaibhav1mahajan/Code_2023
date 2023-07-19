@@ -1,0 +1,270 @@
+Javascript is backward compitable language but not forward.
+We have tool like babel which convert our code to Es5 so that our code is properly work in old browser
+Variables:
+    1.variable can store some information
+    2.you cannot start variable name with nubmer
+    3.you can use only underscore or dollar symbol in var name
+    4.you can not use spaces
+    5.Convention, use camelCase, first_name (snake case writing)
+
+
+Let 
+    1.you can not declare let twice.
+
+Const
+    1.you can not change the value of const
+    2.It store the address of variable'name
+
+String:
+
+    1.To convert string into number just put '+' symbol in front of string.
+    2.String conatenation by using + symbol
+    3.Use template string 
+        console.log(`My name is ${firstName}` and my age is ${age})
+ 
+
+BigInt:
+    1.new data type in java 
+    You can use it via calling constuctor `BigInt(5898746847984654798)` or by 55885454586n.
+
+== vs ===
+    == checks only value not the data type, only in Javascript
+    === checks boht value as well as data type
+
+!= vs !==   
+    same as == and === in opposite manner
+
+
+falsy value 
+    1.false,null,undefind,0,""(empty string)
+    go inside else condition
+
+Ternary operator
+    1. int drink = age>=5 ? "coffee" : "milk";
+
+Prompt 
+    1. It takes string as input 
+
+Loops
+    1. for Loops
+    Ex. for(int i=0;i<age.length;i++){
+        body
+    }
+
+    2: while loop
+    Ex. int i=0;
+        while(i<age.length){
+            bodyi++;
+        }
+
+    3: for of loop in array (It is a type of iterator for loops)
+    Ex. for(let fruit of fruites){
+        body;
+    }
+
+    4: for in loop in array (give index)
+    Ex. for(let index in fruites){
+        console.log(fruites[index]);
+    }
+
+
+Array
+
+    1. Square bracket for intialization
+    2. We can store any data type (mixed as well)
+    3. Array is of object type
+
+Array Destructuring
+    const myArray = ["value1" , "value2","value3","value4"];
+    let [myvar1 , myvar2] = myArray // These line is same as
+    let myvar1 = myArray[0];
+    let myvar2 = myArray[1];
+
+    If there are so many elements in array then we can do something like this
+    let[myvar1, , myvar2] = myArray
+    This will store index 0 and index 2 , this will skip index 2
+
+    We can also do something like this
+    let[myvar1, myvar2 , ...myNewArray] = myArray;
+    myNewArray is of type array which will contain all elements after index 1.
+
+
+
+Array's Methods
+    1. isArray()          : to find var or let is array or not
+    Ex. console.log(Array.isArray(ages));(True/False)
+
+    2. push()             : append element to the right
+    3. pop()              : remover the last element
+    Ex. This both method return the removed items
+
+    4. unshift: add in the front (at zeroth index)
+    5. shift              : remove from front
+    This methods are slower then push and pop.
+
+    6. slice(index)            : create new array from given index
+    7. [].concat(array)        : concat array in any array
+    8. [...array1]             : spread operator
+    This all method gives new object, slice is most efficient but spread operator is most commonly used.
+
+
+
+Objects
+
+Arrays are good but not sufficient for real world data
+Object store key value pairs
+Object don't have index
+
+In order to create object , 
+    const person = {
+        name: "Vaibhav Mahajan", // we can write name like that "name" as well
+        age: 22
+    };
+
+In order to access data from object , we have something like this, 
+    console.log(person.name);
+    console.log(person);
+    We have second method as well
+    console.log(person["name"]);
+
+
+person.gender = "male" : to add key value pair
+
+Difference between dot and bracket notion
+
+1. In order give key such as (person hobbies), we need to uses bracket notation.
+
+2. In order to add key which are whose key'name is stored in variable
+    Ex: const key = "email";
+    person[key] = "krishna@gmail.com"
+
+
+Loops in object
+
+1. for(let key in person){
+    console.log(`${key} : ${person[key]}`)
+}
+
+2. Object.keys(person) give array of keys
+
+3. for(let key of Object.keys(person)){
+    console.log(perosn[key]);
+}
+
+Computed Properties
+
+To add key value pair only through variable
+Ex. const key1 = "ObjKey1";
+    const key2 = "ObjKey2";
+
+    const val1 = "value1";
+    const val2 = "value2";
+    
+    const obj = {
+        [key1] : val1;
+        [key2] : val2;
+    }
+
+        or
+        const obj = {};
+        obj[key1] = val1;
+        obj[key2] = val2;
+
+Spread operator in objects
+
+const newArray = [..."Vaibhav_Mahajan"] : give array of every char
+
+Object's doesn't contain two same keys, it will always override the below value
+
+const obj1 = {
+        key1 : val1;
+        key2 : val2;
+    }
+
+const obj2  = {
+        key3 : val3;
+        key4 : val4;
+    }
+ 
+ const obj =  {...obj1, ...obj2, key5 : "val5"};
+
+  we can do something like this
+  const obj1 = {..."ABC"};
+  this will set index as value and char as key
+
+
+
+Object Destructuring
+
+const band = {
+    bandName: "led", 
+    famousSong: "stairway to heaven"
+    year: 1695;
+    anotherFamousSong: "Hello Brother"
+}
+
+let {bandName,famousSong} = band;
+console.log(bandName);
+
+or
+let {bandName : var1, famousSong: var2, ...restProperties} = band;
+this will store led in var1 variable and starway to heaven in var2 variable
+
+Here restProperties is an object whose key value pair are year and anotherFamousSong
+
+
+Oject inside array
+
+Very useful in real world applications
+
+const users = [
+    {userId: 1, firstName: "Vaibhav"},
+    {userId: 2, firstName: "Chetan"},
+    {userId: 3, firstName: "Aditya"},
+    {userId: 4, firstName: "Atharv"},
+];
+
+    for(let user of users){
+        console.log(user);
+        console.log(user.user.firstName)
+    }
+
+nested Destructuring
+
+const users = [
+    {userId: 1, firstName: "Vaibhav"},
+    {userId: 2, firstName: "Chetan"},
+    {userId: 3, firstName: "Aditya"},
+    {userId: 4, firstName: "Atharv"},
+];
+
+let [user1, user2] = user;
+console.log(user1); // give user1 object
+
+let[{firstName},{userId}] = user
+firstName give "Vaibhav" and userId give 2;
+
+let [{firstName:name , userId} , {userId}, {firstName:name2}] = user
+
+This is known as nested destructuring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Javascript Methods 
+trim()             :  remove extra spaces from both the sides
+toUpperCase()       :  change all chars of string to upper case
+toLowerCase()       :  change all chars of string to lower case
+slice(start,end)    :  substring in java
+slice(start)        :  substring starts with start index
+typeof (name)       :  to check the type of variable

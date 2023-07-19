@@ -1,0 +1,34 @@
+1 - The possibilities are endless with javascript , we can do mobile development, create a VR game , program robots etc
+2 - It's evolving so rapidly.
+
+3 - There are several types of data Types :
+    1. Number
+    2. String
+    3. Boolean
+    4. Null (Explicitly set variable with no value)
+    5. Undefined (For variable that have not been defined)
+    6. Object (Complex Data Strcture - Arrays)
+    7. Symbol (Used with objects)
+
+4 - String Method 
+    1.  indexOf() : give index of first occurance of that char
+    2.  lastIndexOf() : give index of last occurance of that char
+    3. slice(begin index, end index(Exclusive)) : give substring
+    4. substr(begin index , length of substr) : give substring
+
+5 - NaN : not a number
+
+6- Arrays Methods
+    1. join() : make array into string , you can pass argument as well to join specific char in between
+    2. indexOf() : give index of argument
+
+7 - Boolean
+    In javascript lowercase letter are greater than uppercase letter
+
+    if you compare console.log('crystal' > 'shaun')  it gives false , comparison starts with first letter and go on where a difference comes.
+
+8 - Type Conversion
+    1. score = Number(a); , converts string into number , if it is possible
+
+    2. String(a) , converts into string
+    3. Boolean(a) : concept of falsy and truty value
