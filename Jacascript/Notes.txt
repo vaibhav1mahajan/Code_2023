@@ -21,6 +21,10 @@ String:
     2.String conatenation by using + symbol
     3.Use template string 
         console.log(`My name is ${firstName}` and my age is ${age})
+
+    Ex-    let age =18; 
+    In order to convert age in string we have something like this
+    let StringAge = String(age)
  
 
 BigInt:
