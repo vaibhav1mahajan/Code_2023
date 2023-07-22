@@ -1,5 +1,4 @@
-package DSA.Sorting;
-
+package Jacascript.DSA.Sorting;
 
 import java.util.Arrays;
 

@@ -1,0 +1,10 @@
+What is Recursion?
+Recursion is a programming technique where a function calls itself in order to solve a problem. In other words, a function is defined in terms of itself, and it keeps calling itself with modified parameters until it reaches a base case, at which point the recursion stops.
+
+What is Recursion Tree?
+A recursion tree is a visual representation of the recursive calls made by a function during its execution. It helps in understanding the flow of recursive calls and the relationship between different recursive instances. Each node in the tree represents a single call to the recursive function,
+
+What is Base Condition?
+The base condition is a crucial part of a recursive function as it defines the termination condition for the recursion. It's the scenario where the function stops calling itself and returns a result directly without making any further recursive calls.
+
+Time and Space complexity for printing number from 1 to n is BigO of N;
