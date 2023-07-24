@@ -1,0 +1,65 @@
+Packages:
+A package is a way of organizing related classes, interfaces, and other types into a single namespace. It provides a mechanism for encapsulating code and helps to avoid naming conflicts between classes. 
+
+Usage of Packages
+    1.Code Organization: Packages provide a structured way to organize code. They group related classes and other types together, making it easier to locate and manage them. 
+
+    2.Namespace: A package acts as a namespace, which means it provides a unique identifier for classes. 
+
+    3.Access Control: Packages also serve as a boundary for access control. 
+
+    4.Import Statements: When using classes from a different package, you can import them into your code using import statements. 
+
+    5.Package Hierarchy: Packages can be organized in a hierarchical manner, forming a package hierarchy.
+
+--------------------------------------------------------------
+
+Static:
+The keyword "static" is used to declare a member (variable or method) that belongs to the class itself rather than a specific instance of the class.
+
+Key points to understand about "static":
+
+    1.Static Variables: Static variables are shared by all instances of a class. They are initialized only once, and their values are preserved across multiple instances. Static variables are accessed using the class name followed by the variable name (e.g., Car.totalCars).
+
+    2.Static Methods: Static methods are associated with the class and not with any specific instance. They can be called directly through the class name (e.g., Car.calculateAverageSpeed()). Static methods can only directly access other static members of the class.
+
+    3.Static Block: Apart from variables and methods, you can also have static blocks in Java. A static block is a section of code enclosed in curly braces and preceded by the "static" keyword. It is executed only once when the class is loaded, usually used for initializing static variables or performing one-time setup operations.
+
+    4.Utility Classes: Static members are commonly used in utility classes that provide helper methods or constants. Since utility classes don't need to be instantiated, you can make all their members static, allowing easy access without the need to create objects.
+
+    5.You cannot this in static method.Because this keyword is dependent on objects but static method are indepedent on objects .
+
+    6.Outside class cannot be static , Because it itself does not dependent on any other class 
+
+----------------------------------------------------------------------------
+
+Singleton Class
+
+In object-oriented programming, a singleton class is a class that allows only one instance of itself to be created. It ensures that there is a single global point of access to the instance, providing a way to control and restrict object creation. The Singleton pattern is useful in scenarios where you want to limit the number of instances of a class to exactly one.
+
+Demo code for it :
+
+public class Singleton {
+    // Private static instance variable
+    private static Singleton instance;
+
+    // Private constructor to prevent direct instantiation
+    private Singleton() {
+        // Initialization code, if needed
+    }
+
+    // Public static method to access the singleton instance
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    // Other methods of the singleton class
+    public void doSomething() {
+        // Code to perform some action
+    }
+}
+
+

@@ -1,0 +1,15 @@
+Using "this" can be helpful when there is a need to distinguish between the object's properties and local variables that have the same name. It helps the program understand that you are referring to the object's property and not a local variable.
+We can use this keyword for calling another constructor through a constructor
+New keyword allocates space in heap memory , new keyword is used for creating new objects
+n Java, a wrapper class is a class that provides an object representation of a primitive type. It allows you to treat primitive data types as objects. Each primitive type in Java has a corresponding wrapper class that provides useful methods and additional functionality.
+In Java, the Integer wrapper class is indeed immutable, which means that once an Integer object is created, its value cannot be modified. However, it is possible to observe the behavior that appears to modify the value of an Integer object due to autoboxing and unboxing.
+Autoboxing is the automatic conversion of a primitive type to its corresponding wrapper class, and unboxing is the automatic conversion of a wrapper class object back to its primitive value. Java provides this automatic conversion to make it convenient to work with both primitive types and their corresponding wrapper classes.
+final Keyword:
+A field can be declared as final. Doing so prevents its contents from being modified, making it, essentially, a constant.
+It is a common coding convention to choose all uppercase identifiers for final fields:
+     final int FILE_OPEN = 2;
+
+Unfortunately, final guarantees immutability only when instance variables are primitive types, not reference types.
+If an instance variable of a reference type has the final modifier, the value of that instance variable (the referenceto an object) will never change—it will always refer to the same object—but the value of the object itself can change.
+When you use final keyword ,always intialize  while declaring it 
+You can't reassgin final , it means your object in heap memory can't be change any how.
