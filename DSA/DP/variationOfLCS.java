@@ -63,4 +63,19 @@ public class variationOfLCS {
         int insertion = m-dp[n][m];
         return insertion + deletion;
     }
+
+    public static int LongestPalindromicSubsequence(String str){
+        int n = str.length();
+        StringBuilder s = new StringBuilder(str);
+        s= s.reverse();
+        int dp[][] = table(str, s.toString());
+        return dp[n][n];
+    }
+        public static int MinNumberOfDeletionToMakePalindrome(String str){
+        int n = str.length();
+        StringBuilder s = new StringBuilder(str);
+        s= s.reverse();
+        int dp[][] = table(str, s.toString());
+        return n- dp[n][n];
+    }
 }
