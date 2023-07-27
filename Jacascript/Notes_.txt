@@ -1,0 +1,102 @@
+1 - The possibilities are endless with javascript , we can do mobile development, create a VR game , program robots etc
+2 - It's evolving so rapidly.
+
+3 - There are several types of data Types :
+    1. Number
+    2. String
+    3. Boolean
+    4. Null (Explicitly set variable with no value)
+    5. Undefined (For variable that have not been defined)
+    6. Object (Complex Data Strcture - Arrays)
+    7. Symbol (Used with objects)
+
+4 - String Method 
+    1.  indexOf() : give index of first occurance of that char
+    2.  lastIndexOf() : give index of last occurance of that char
+    3. slice(begin index, end index(Exclusive)) : give substring
+    4. substr(begin index , length of substr) : give substring
+
+5 - NaN : not a number
+
+6- Arrays Methods
+    1. join() : make array into string , you can pass argument as well to join specific char in between
+    2. indexOf() : give index of argument
+
+7 - Boolean
+    In javascript lowercase letter are greater than uppercase letter
+
+    if you compare console.log('crystal' > 'shaun')  it gives false , comparison starts with first letter and go on where a difference comes.
+
+8 - Type Conversion
+    1. score = Number(a); , converts string into number , if it is possible
+
+    2. String(a) , converts into string
+    3. Boolean(a) : concept of falsy and truty value
+
+
+
+
+    Namaste javascript
+
+    Lecture-01
+ 
+1.  Everything in javascript happens inside execution context, you can assume this execution context as big box.
+    The execution context consists of several components that define the environment in which the code is evaluated and executed. There are three types of execution context
+    It has two component: 
+        1  - Memory Component(Variable environment): This is where all variables and functions are stored as key value pair
+        2  - Code component(Thread of execution): This is where code is executed one line at a time
+2.  javascript is a synchronous single-threaded language, It means is executed only one line at time in aspecific order.
+
+3. Javascript is not possible without this execution context
+
+
+Lecture-02 (What happens when you run javascript code?)
+
+Program
+    var n =2;
+     function square (num){
+        var ans = num*num;
+        return ans;
+     }
+     var square2 = square(n);
+     var square4 = square(4);
+
+1. As soon as you run the program, a global execution context is created.
+2. This execution context is created into two phases
+3. First phase is known as memory creation phase, In this phase javascript allocates memory to all variable and function.
+4. In the first phase , it allocate memory to n and store a special value undefined to it.
+5. It literally store the whole function
+6. It also allocate memory to square2 and square4.
+
+
+7. Second phase is code execution phase 
+8. As soon as first line encounter , it places 2 in place of undefined for variable n.
+9. From line 2 to line5 there is nothing  to executed.
+10. When you invoke a function a brand new execution context is created which has again two component.
+11. In this new execution context again two phases will take place.
+12. In memory allocation phase , parameters also get memory rest everything is same.
+13. In code execution phase, ans become 4 
+14. When control comes to return statement , it means return the whole control where function  was invoked
+15. Now, the whole execution context(the brand new ) will be deleted.
+16. Same thing happens for square4.
+17. When the whole program is executed , global execution context will also be deleted.
+18. Javascript manages all this rush with call stack.
+19. Call stack maintains the order of execution of execution context.
+
+
+Lecture-03 (Hoisting in javascript)
+
+Program 
+console.log(x);
+getName();
+
+var x =7;
+fucntion getName(){
+    console.log("Hello");
+}
+
+1. It give undefined and Hello as output , due to execution context thing.
+2. Even before code is executing , memory is allcoated to each and every variable and fucntion.
+3. If we decalre arrow function or declare function in var , at the time of memory allocation , the value of this function is set undefined.
+
+
