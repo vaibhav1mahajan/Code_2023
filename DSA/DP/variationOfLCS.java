@@ -76,6 +76,6 @@ public class variationOfLCS {
         StringBuilder s = new StringBuilder(str);
         s= s.reverse();
         int dp[][] = table(str, s.toString());
-        return n- dp[n][n];
+        return n-dp[n][n];
     }
 }

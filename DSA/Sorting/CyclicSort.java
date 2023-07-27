@@ -23,5 +23,6 @@ public class CyclicSort{
             }
         }
     }
+    public static
     
 }
