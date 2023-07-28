@@ -91,7 +91,7 @@ console.log(x);
 getName();
 
 var x =7;
-fucntion getName(){
+fucntion getNasme(){
     console.log("Hello");
 }
 
@@ -100,3 +100,9 @@ fucntion getName(){
 3. If we decalre arrow function or declare function in var , at the time of memory allocation , the value of this function is set undefined.
 
 
+Lecture:04 (About function)
+
+1. Nothing new was taught 
+2. Local memory is created when we invoke a function.
+
+Lecture:05 
