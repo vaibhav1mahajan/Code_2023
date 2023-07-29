@@ -105,4 +105,25 @@ Lecture:04 (About function)
 1. Nothing new was taught 
 2. Local memory is created when we invoke a function.
 
-Lecture:05 
+Lecture:05 (Shortest Javascript program)
+
+1. A empty file is the shortest javascript program
+2. Javascript setup a global execution context even if there is no code .
+3. Javascript engine creates window object(A big object with lots of method and function).
+4. You can access all this variables and function anywhere in the program.
+5. A "this" keyword is also created by javascript engine. at global level this points to global object.
+6. Window is a global object which is created along with global execution context.
+7. Javascript run on browser , app , in backend, so in order to run javascript, there must be javascript engine.
+8. In Chrome it is V8(Javascript engine).
+9. At global level this is points to window object
+10. Anything which is not inside any function is in global space.
+ 
+ Program :
+  var a = 10;
+  function b(){
+    var c = 5;
+  }
+  console.log(window.a);
+  console.log(this.a);
+  console.log(x); // gives not definded , because this will search in golbal space
+
