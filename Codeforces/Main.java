@@ -17,30 +17,7 @@ public class Main  {
     }
     
    public static void solve(StringBuilder res){
-    int min1 = 10000000;
-	// bool flag = false;
-    int n = in.nextInt();
-    int[] arr = new int[n];
-    for (int i = 0; i < n; i++) {
-        arr[i] = in.nextInt();
-    }
-
-    boolean flag = false;
-	for(int i=1;i<n;i++){
-		int a = arr[i-1]-arr[i];
-		if(a>0){
-			res.append(0 + "\n");
-            flag = true;
-			break;
-		} else{
-            a= Math.abs(a);
-            min1 = Math.min(a, min1);
-        }
-		
-	}
-	if(!flag){
-		res.append(min1/2 + "\n");
-	}
+    
     print(res);
 
    }
