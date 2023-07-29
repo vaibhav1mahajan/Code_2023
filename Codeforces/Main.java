@@ -18,8 +18,11 @@ public class Main  {
     
    public static void solve(StringBuilder res){
     
-    print(res);
 
+   }
+
+   public static int recursion(int[]arr , int ind){
+    if()
    }
 public static int binarySearchUpper(int[] arr,int n,int target){
     int start =0;

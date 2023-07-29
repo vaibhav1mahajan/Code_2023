@@ -10,35 +10,18 @@ typedef unsigned long long ull;
 void solve() {
 	int n;
 	cin>>n;
-	 int arr[n];
-	for(int i =0;i<n;i++){
-		cin>>arr[i];
+	int count =0;
+	int maxi =1;
+	for(int i =1;i< sqrt(n);i++){
+		if(n%i==0){
+            count++;
+            maxi = max(count,maxi);
+        } else{
+            count=0;
+        }
 	}
-	int hello = INT_MAX;
-	bool flag = false;
-	for(int i=1;i<n;i++){
-		int a = arr[i-1]-arr[i];
-		if(a>0){
-			cout<<0<<endl;
-			flag = true;
-			break;
-		}else{
-				a = a*(-1);
-			hello = min(hello,a);
-		} 
 
-		
-	}
-	if(!flag){
-		int b;
-		if(hello%2==0){
-			b = hello/2 +1;
-		} else{
-			 b = (hello+1)/2;
-		}
-		
-		cout<<b<<endl;
-	}
+		cout<<maxi<<endl;
 
 }
  
