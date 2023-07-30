@@ -14,6 +14,9 @@ OS is simply a software , but must have this feature
 
 A shell is basically a command line interpreter, executes each command line by line , basically a program by which we can operate OS through commands. It uses Bash scripting
 
+Unix is a powerful and widely used operating system developed in the 1970s at Bell Labs. It has had a significant influence on the development of modern operating systems and has served as the foundation for various Unix-like systems such as Linux and macOS.
+
+
 Commands:
 1. echo              : It is console.log of linux
 2. pwd               : Tells location where are you 
@@ -21,7 +24,7 @@ Commands:
 4. cd                : to open particular dir
 5. .                 : current dir
 6. ..                : Parent dir
-7. ~~                : Home dir
+7. ~                 : Home dir
 8. -                 : previous dir
 9. #                 : Used to comment in terminal
 10 mkdir             : to make new dir
