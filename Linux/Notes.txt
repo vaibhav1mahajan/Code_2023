@@ -5,17 +5,31 @@ What happens when you start computer:
     2. Secondly it loades bootloader which intialize the the OS
 
 What is OS?
+
+An operating system (OS) is a software that manages and controls the computer hardware and provides an environment for running applications and executing user programs. It acts as an intermediary between the computer hardware and software applications.
+
 OS is simply a software , but must have this feature
     1.Kernel: It is the core of any OS. It has control over anything in system. It basically bridge between hardware and software.  
     2.File System : It is a method or Data stucture that the OS used in order to store and retriver data in the memory.
     3.User Interface(CLI,GUI)
     4.Manipulate data based oh commands
 
+Linux vs Windows
+
+    1.  Open Source: Updates keeps comming on regular basis , so bugs fixed very fast as compare to Windows
+    2.  Suppports almost all programming language
+    3.  Linux terminal is superior than cmd 
+    4.  Bash scripting
+
+
+
 
 A shell is basically a command line interpreter, executes each command line by line , basically a program by which we can operate OS through commands. It uses Bash scripting
 
 Unix is a powerful and widely used operating system developed in the 1970s at Bell Labs. It has had a significant influence on the development of modern operating systems and has served as the foundation for various Unix-like systems such as Linux and macOS.
 
+What is terminal?
+    A terminal refers to a program or a hardware device that provides an interface for users to interact with a computer system through a command-line interface (CLI)
 
 Commands:
 1. echo              : It is console.log of linux
@@ -43,12 +57,32 @@ Commands:
 23 mkdir -p          : for creating folder inside folder if parent folder is not present or not created yet
 24 find ~ -name (name): to find the absoulte path of (name) file
 25 *                  : used for all types
-26 find ~ -type -name d (name) : to find folder
+26 find ~ -type  d -name  (name) : to find folder /d stands for dir
 In Linux, a flag refers to a command-line option or parameter that modifies the behavior of a command or program. Flags are also known as options or switches.
+
+Ex of cp and mv command
+    cp ${file name} ${location}
+    cp text.txt /linux_masterclass
+    mv text.txt /linux_masterclass
+
 
 Flags are used to customize the way a command or program operates by providing additional instructions or specifying particular settings. They are typically specified after the command name and preceded by a hyphen (-) or double hyphen (--).
 
+
+1. -a       : show hidden files as well (list all)
+    Ex: ls -a
+2. -l       : to display detailed information of files
+    Ex: ls -l
+3. -p       : create directory if does not exist
+    Ex: mkdir -p hello1/hello2
+4. -r       : recurive
+    Ex: rm -r linux_masterclass
+5. -v       : I don't know the use but if use rm -rv linux_masterclass it tells  what it removes in order
 Whichever dir starts with . in linux is hidden 
+
+Double tab is also command to show dir which start with what you have typed
+When we do ls ,all directory comes in blue color and files comes in white color
+rmdir doesn't work if there is any file or directory inside it so what you can do is use rm -r hello1 , it remove recurive all the files inside the dir
 
 ---------------------------------------------------------------------------------
 
