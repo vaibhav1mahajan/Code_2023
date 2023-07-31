@@ -159,13 +159,14 @@ just type ls /usr/bin | less (you will able to see all the files which are prese
 
 -----------------------------------------------------------
 
-Lecture-3:
+Lecture-3: (User Management and permissions)
 
+Every user have their home directory where user specific files are stored
 The system has another set of id , uid which system used to identify User
 
 There are so many user in linux OS
 
-Most powerful user is root or superuser, it can access any file in the system or terminate any process.
+Most powerful user is root or superuser, it can access any file in the system or start and terminate any process.
 
 sudo command give access to superuser (superuser do)
 It's not the practice to access sudo, you may end up by deleting some important files in system
@@ -181,6 +182,8 @@ root:x:0:0:root:/root:/bin/bash
 6- Home directory
 7- shell
 
+-------------------------------------------------------
+
 root:!:19511:0:99999:7:::
 1   :2:3    :4:5    :6:789
 
@@ -189,14 +192,14 @@ root:!:19511:0:99999:7:::
 3- Date of last pasword change (denotes the date , days since 1st jan 1970)
 4- Minimum password age
 5- Max passord age
-6- Warning period of password
-7- Password expiry period
-8- Account expiry date
+6- Warning period for changing password
+7- Password expiry period (How many days have been passed since my password has expired)
+8- Account expiry date (On which date my account will expire)
 9- Reserved Field
 
 ------------------------------
 
-sudo cat /etc/Group
+sudo cat /etc/group
 
 root:x:0:
 1   :2:3:4
@@ -204,7 +207,65 @@ root:x:0:
 1- Group Name
 2- Group Password
 3- Group Id(GID)
-4- List of users
+4- List of users (if there are multiple user in a group there name is seprated by comma)
+
+------------------------------------------
+
+sudo useradd aditya (Create another user with name aditya)
+sudo userdel aditya (delete user)
+sudo passwd (Username) (In order to change the password)
+sudo hostname vaibhav1mahajan (for changing hostname which is shown in terminal)
+
+------------------------------------------------------------------------------------------
+
+Permissions
+
+d/rwx/r-x/r-x (It has 10 permission bits)
+1 2   3   4
+
+1- This is type of data
+    d = directory
+    - = file
+    l = link
+
+2- User permission (symbolic representation u)
+
+3- Group permission (symbolic representation g)
+
+4- Other permission (symbolic representation o)
+
+This is in order
+
+    rwx- are symbolic representation
+    r- readalbe (code is 4)
+    w- writable (code is 2)
+    x- executable (code is 1)
+    -- empty  
+
+
+
+Modify the permission
+
++ is used to add permission
+- is used to remove permission
+
+Command: chmod {u,o,g}{+,-}{r,w,e,-} {filename,directory}
+    Ex: chmod o+r ouutput.txt
+        chmod ogu+rwx output.txt
+
+We have another method to do the same thing 
+ Command : chmod +777 output.txt
+        chmod +741 output.txt
+
+To change the ownership of file 
+Command: chown user_name output.txt
+
+To change group 
+    Command: chgrp group_name output.txt
+
+To change both group and ownership
+    Command: chown user_name:group_name output.txt
+
 
 
 
@@ -220,6 +281,7 @@ Commands:
 
 
 PAM : Pluggable Authentication Module
+
 
  
 
