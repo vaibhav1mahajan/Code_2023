@@ -16,7 +16,7 @@ int knapsack(vector<int> weight, vector<int> val, int n, int maxWeight)
 	}
 	return prev[maxWeight];
 
-}
+}    
 
 int main(){
     cout<<2<<endl;
