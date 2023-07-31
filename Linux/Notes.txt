@@ -88,7 +88,7 @@ rmdir doesn't work if there is any file or directory inside it so what you can d
 
 Lecture-2:
 
-Linux has three standard stream, there job is to transfer data in the form of text
+Linux has three standard stream, there job is to transfer data in the form of text in case of linux
 Three types are:
     1. stdin(Standard input) (Code is 0)
     2. stdout(Standard output) (Code is 1)
@@ -102,24 +102,44 @@ Output can be given in any form such as
 
 Some commands:
 
-    1. >     : is used to save output in text file
+    1. >     : is used to save output in text file (in order to redirect your output)
+        Ex: ls > output.txt
     2. >>    : to append the new output in the previous one
+        Ex: ls >> output.txt
     3. 2>    : is used to save standard error in text file 
+        Ex: lg 2> output.txt (if you use 2>> it will standard error);
     4. 2> /dev/null  : it's nullify error and won't show in terminal 
     5. head          : show only first 10 lines of file
+        Ex: head ls /var/log/syslog 
     6. tail          : show only last 10 lines of file
+        Ex: tail ls /var/log/syslog
     7. -n (no.of lines) : to show specified no . of lines
+        Ex: tail -n 15 ls /var/log/syslog
     8. sort             : sort the text file according to alphabet
+        Ex: sort output.txt
     9. -r               : this flag is used to sort in reverse order
+        Ex: sort -r output.txt
     10. tr              : to translate a file 
+        Ex: cat output.txt | tr a-z A-Z
     11. uniq            : same work as set 
+        Ex: uniq output.txt
     12. uniq -c         : give occurances of items(if they are adjacent, means sorted)
+        Ex: uniq -c output.txt
     13. uniq -u         : give only unique value
+        Ex: uniq -u output.txt
     14. uniq -d         : give only value which are duplicate
+        Ex: uniq -d output.txt
     15. wc              : word count  
-    16. wc -l           : how many lines it has 
+        Ex: wc output.txt (give three value in output, no. of lines then word then size in terms of bytes)
+    16. wc -l           : how many lines it has
+        Ex: wc -l output.txt 
     17. wc-c            : size of file in terms of chac
+        Ex: wc -c output.txt
     18. wc -w           : no. of words in file
+        Ex: wc -w output.txt
+    19. grep            : to search text in file (has many more use)
+
+If we typed a wrong command then terminal give standard error instead of standard output
 
 Pipe : It allows you to take standard output of one command as an standard input of another command.
 
@@ -127,11 +147,15 @@ Ex: ls -la /etc | less (This "|" symbol is known as pipe)
 
 Enviornment Variables
 
+Type echo $HOME in terminal , this gives output same as pwd
+
+
 These Enviornment Variables contains useful infromation that is used by shell and other processors 
-env is simple command by which we can see all our enviornment variables and their value
+"env" is simple command by which we can see all our enviornment variables and their value
 
 There is one enviornment variable named $PATH which have all path
 just type ls /usr/bin | less (you will able to see all the files which are present in linux in order to run whenever you type any command in terminal it will look through this list)
+
 
 -----------------------------------------------------------
 
@@ -141,7 +165,7 @@ The system has another set of id , uid which system used to identify User
 
 There are so many user in linux OS
 
-Most powerful use is root or superuser, it can access any file in the system or terminate any process.
+Most powerful user is root or superuser, it can access any file in the system or terminate any process.
 
 sudo command give access to superuser (superuser do)
 It's not the practice to access sudo, you may end up by deleting some important files in system
