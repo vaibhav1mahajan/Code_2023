@@ -1,0 +1,31 @@
+Introduction To Programming
+
+Programming is a way to talk to computers
+
+Programming allows humans to communicate with computers effectively and enable them to carry out various tasks, such as calculations, data processing, automation, simulations, and much more. Programming languages are used to write these instructions, and each language has its own syntax and rules that programmers must follow.
+
+What is ECMAScript?
+ECMAScript is a scripting language specification that serves as a standard for several programming languages, most notably JavaScript. It provides the rules, details, and guidelines for the implementation of these languages, ensuring consistency and interoperability across different platforms and browsers.
+
+Javascript is very liberal in what it allows
+
+How to exucute JavaScript?
+
+1.Node.js is a runtime environment that allows you to execute JavaScript outside of a web browser. It uses the V8 JavaScript engine (the same engine used by Google Chrome) to run JavaScript code. Install Node.js on your computer, create a JavaScript file (e.g., script.js), and run it using the node command in your terminal or command prompt.
+
+2. Web Browsers:
+The most common way to execute JavaScript is in web browsers. You can create an HTML file with a <script> tag containing your JavaScript code and open it in a web browser. The browser will automatically execute the JavaScript code when it loads the HTML page.
+
+3.Developer Tools:
+Modern web browsers come with developer tools that allow you to execute JavaScript code directly within the browser's console. Press F12 or right-click on a web page and select "Inspect" or "Inspect Element" to open the developer tools. Go to the "Console" tab, and you can type and execute JavaScript code directly in the console.
+
+----------------------------------------------------------------------------------------------------
+What is syntax?
+In computer programming, syntax refers to the rules and structure that define the correct way to write code in a programming language. 
+
+What is variable?
+A variable is a container that holds a value, such as a number, a string, an object, or any other data type. Variables are used to store data and manipulate it throughout the program's execution. 
+
+The value of JavaScript variable can be changed during the execution of program
+You can't declare variable name which start with digit
+Javascript is always case sensitive means vaibhav and Vaibhav treated as two different variable
