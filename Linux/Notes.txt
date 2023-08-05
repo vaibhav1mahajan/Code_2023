@@ -266,6 +266,12 @@ To change group
 To change both group and ownership
     Command: chown user_name:group_name output.txt
 
+To change the default permission of file 
+    Command: umask 777  
+    There is catch here , umask subtract the value what we have given from 777 and the resultant we will the permission.
+
+
+
 
 
 
