@@ -29,3 +29,6 @@ A variable is a container that holds a value, such as a number, a string, an obj
 The value of JavaScript variable can be changed during the execution of program
 You can't declare variable name which start with digit
 Javascript is always case sensitive means vaibhav and Vaibhav treated as two different variable
+
+Lecture:03
+
