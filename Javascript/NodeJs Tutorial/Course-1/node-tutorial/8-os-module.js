@@ -2,11 +2,11 @@ const os = require("os");
 
 //info about current user
 const user = os.userInfo();
-console.log(user);
+// console.log(user);
 
 // method returns the system uptime in seconds
 const upTime = os.uptime()
-console.log(upTime/60);
+// console.log(upTime/60);
  
 const currentOs = {
     user: os.userInfo(),
@@ -15,6 +15,6 @@ const currentOs = {
     release: os.release(),
 }
 // console.log(currentOs);
-const data = os.tmpdir()
-console.log(data);
-// console.log(os.cpus().length);
+const data = os.networkInterfaces();
+// console.log(data);
+console.log(os.cpus());
