@@ -1,0 +1,38 @@
+GitHub is a online platform or website that allows us to host GitHub
+Git is a distributed version control system (DVCS) that is widely used for tracking changes in source code during software development. It allows multiple developers to collaborate on a project efficiently.
+Features of Git
+1. Version control
+
+2. Distributed System : Unlike centralized version control systems, Git is distributed.  Each developer has a complete copy of the repository on their local machine. This means that developers can work independently and commit changes locally before sharing them with others.
+
+3. Branching and Merging:
+Git encourages the use of branches, which are separate lines of development. Developers can create branches to work on new features or bug fixes without affecting the main codebase. Branches can be merged back into the main branch when the changes are ready.
+
+Commands
+1. git status         : Shows untracked files
+2. git add            : Stage changes for the next commit
+3. git commit         : Save the changes that have been staged using git add to the version history.
+4. cat                : Used for concatenating and displaying the contents of files.
+5. git restore --staged names.txt : to unstaged the files(If somehow we staged unwanted files)
+6. git log             :  Shows history of commits  
+7. git reset hashId    :  Unstage all the commits above it
+8. git stash           :  To send files in backstage
+9. git stash clear     :  To clear stash files forever
+10 git stash pop       :  To bring out backstage files onto staged
+11.git remote add origin(any name) : To attach url to our local project
+12.git remote -v       : Shows all the url attached to this folder
+13.git push origin(url name) master(branch name): Push changes or commits to the selected branch
+14.git branch feature(branch name)   : creates a new branch 
+15.git checkout feature(branch name) : Head moves to new branch
+16.git clone (url)          : cloning existing project
+17.git remote add upstream (url) : from where you have forked this project
+
+For every branch you can create only one pull request , hence for every feature or bug you need to create new branch
+
+You need to force push if you want to delete some commit from url
+18. git push origin master -f: force push to url
+19. git fetch --all --prune : To fetch all the changes from main branch
+    git checkout main
+20. git reset --hard upstream/main :  To move head of our branch to upstream branch
+21. git pull upstream main : Will do same as combine of above 3
+22. git rebase -i hashId   : Choose pick and s(Squash) , this command will merge several commits into one and after that use :x 
