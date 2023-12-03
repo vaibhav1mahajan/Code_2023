@@ -1,0 +1,63 @@
+Architecture is defined as: In reference to computers, software or networks, the overall design of a computing system and the logical and physical interrelationships between its components.
+Java Architecture is a collection of components, i.e., JVM, JRE, and JDK. It integrates the process of interpretation and compilation. It defines all the processes involved in creating a Java program. Java Architecture explains each and every step of how a program is compiled and executed.
+
+We write source code which is saved with .java extension(Human readable format).
+
+Java compiler converts it into byte code with extension .class also known as intermediate code , this  code requires JVM to run, that's why java is platform independent.
+
+Java is platform independent:
+It means that byte code can run on all machines
+After compiling C/C++ file we get executable file which are platform dependent.
+In java after compling we get byte code , JVM converts this to machine code 
+Java is platform independent but JVM is platform dependent
+
+Java architecture consist of JDK , JRE , JVM ,JIT
+
+JDK(Java development kit)
+Provides environment to develop and run java program
+It is a package that includes
+    1. Development tools
+    2. JRE- to execute the program
+    3. compiler - javac
+    4. archiver - jar
+    5. docs generator - javadoc
+    6. interpreter/loader
+
+
+JRE(Java runtime environment)
+It is an installation package that provide environment to only run the program  
+It consist of 
+    1.Deployment technologies
+    2.User interface toolkits 
+    3.Base libraries
+    4. JVM
+
+After we get the .class file ,the next thing happen at runtime
+
+How JVM works?
+
+1. Loading
+    reads .class file and generate it into binary data
+    an object of this class is created in heap
+
+2. Linking
+    JVM verifies the .class file
+    allocates memory for class variables and defalut values
+
+3. Initialization
+    all static variables are assigned with their values defined in the code and static block
+
+JVM contains stack and heap memory alocation
+
+JVM provides runtime environment to java program, its work to load, verify and execute byte code file. It has three component : class loader , memory area , execution engine
+
+Memory Area consist of four components
+    1. Class
+    2. Heap
+    3. Stack
+    4. PC registers
+
+Execution engine consist of four components
+    1. JIT(just in time compiler)
+    2. Garbage collector
+

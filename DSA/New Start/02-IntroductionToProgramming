@@ -1,0 +1,31 @@
+Types of languages
+1. A procedural language is a type of computer programming language that specifies a series of well-structured steps and procedures within its programming context to compose a program
+
+2. Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. In functional programming languages, functions are first-class citizens, meaning they can be passed as arguments to other functions, returned as values from other functions, and assigned to variables.
+
+3. Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.
+
+Static vs Dynamic
+
+1. Static 
+    1. Perform type checking at compile time
+    Compile time : The source code that you wrote gets converted into machine code is known as compilation (compile time).
+    2. Errors will show at compile type
+    3. Declare data type before you use it
+    4. More control
+
+2. Dynamic
+    1. Perform type checking at runtime.
+    Runtime: When machine code is running
+    2. Error might not show till program is run.
+    3. No need to declare datatype of variablels
+    4. Save time in writing the code but might give error at runtime.
+
+
+There are two types of memory:
+    1. Stack Memory: Contains variable names
+    2. Heap Memory:  Stores original objects
+
+If the change is made via one variable then it will be changed for all variables that are pointing the object.
+
+Objects with no refrence variables are deleted or removed when garbage collection hits
