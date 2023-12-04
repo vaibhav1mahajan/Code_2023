@@ -1,0 +1,25 @@
+
+Lecture: 01
+
+Everything in javascript happens inside an execution context
+It is like a big box and it has two components
+    1. Memory component or variable environment where all the function and variable are stored as key value pair
+    2. Code component or thread of execution in which code is executed line by line 
+
+Javascript is synchronous single threaded language , it means it will execute only one line at a time    
+
+Lecture: 02
+
+var n = 2 ; 
+function square(num) {
+    return num*num;
+}
+var square2 = square(n);
+var square4 = square(4);
+
+Before a single line will execute , a global execution context is made. This execution context is created in two phases.
+    First phase is also known as memory creation phase.
+    In first phase, it will allocate memory to 'n' and store value of undefined and in case of function it stores the whole code 
+    Second phase is code execution phase.
+    Now,javascript once again runs through whole javascipt program line by line(All calculation is done).
+    Now as soon as first line is executed it will place value of n at the place of undefined, and from line 2 to 5 there is nothing to executed 

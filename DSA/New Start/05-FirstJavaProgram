@@ -1,0 +1,31 @@
+javac -d .. Main.java // d flag is used to store byte at any particular location
+
+package: It is the folder in which your java files lies
+
+Data types which can't be break down into further data types are known as primitive data types 
+
+All the decimals values we have in java have by default of type double so we need to add literal f in end of float data type , same for long we need to add L literal 
+
+In Java, a literal is a source code representation of a fixed value. It is a constant or a value that is used exactly as it appears, without computation or further evaluation.
+
+input.next() takes single word where as input.nextLine() takes whole line as input
+
+Automatic type conversion takes place , firstly two types should be compatible and second one destination type should be greater than source type
+
+Automatic type promotion in expressions
+int a = 257;
+byte b = (byte)(a) // give   a % 256(max range)
+
+byte a = 50;
+byte b = 20;
+byte c  = 30;
+int d = a*b/c;
+
+The result of intermediate term a*b should easily exceed byte range , to handle this type of problem java automatic promote this to integer and then perform this operations
+
+Due to above reason we can't to something like this 
+byte b = 50;
+ b = b*2
+
+
+Java follows unique code values 
