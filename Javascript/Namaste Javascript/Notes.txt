@@ -22,4 +22,24 @@ Before a single line will execute , a global execution context is made. This exe
     In first phase, it will allocate memory to 'n' and store value of undefined and in case of function it stores the whole code 
     Second phase is code execution phase.
     Now,javascript once again runs through whole javascipt program line by line(All calculation is done).
-    Now as soon as first line is executed it will place value of n at the place of undefined, and from line 2 to 5 there is nothing to executed 
+    Now as soon as first line is executed it will place value of n at the place of undefined, and from line 2 to 5 there is nothing to executed
+
+
+
+    var n =2;
+    function square(num){
+        var ans = num*num;
+        return ans;
+    }
+    var square2 = square(2);
+    var square4 = square(4);
+
+
+As soon as function is invoked a new global execution context is created and it also has two phase.
+    In first phase memory is allocated to parameter and variable , it will allow memory to num as well
+    In second phase, the value of num is first passed to num , then in code phase num*num is calculated and then undefined of ans is replaced with value
+
+
+Return meaning is to return the control of the program from where it was invoked and as soon as we encounter return the instance of execution context is deleted
+
+Once the whole javascript code is finished its execution , the global execution is deleted
