@@ -8,6 +8,8 @@ It is like a big box and it has two components
 
 Javascript is synchronous single threaded language , it means it will execute only one line at a time    
 
+-----------------------------------------------------------------------------------------
+
 Lecture: 02
 
 var n = 2 ; 
@@ -43,3 +45,24 @@ As soon as function is invoked a new global execution context is created and it 
 Return meaning is to return the control of the program from where it was invoked and as soon as we encounter return the instance of execution context is deleted
 
 Once the whole javascript code is finished its execution , the global execution is deleted
+
+It is a data structure that tracks the execution of a program, specifically the sequence of function calls and their corresponding return addresses. The call stack operates on a last-in, first-out (LIFO) basis, meaning that the last function called is the first one to be resolved.
+
+In javascript, in bottom of call stack global execution context is present
+Names of callstack are  
+    1. Execution Context stack
+    2. Program stack
+    3. Control stack
+    4. Runtime stack
+    5. Machine stack
+
+-----------------------------------------------------------------------------------------
+
+Lecture:  03
+
+var x = 7;
+function getName(){
+    console.log("Namaste Javascript");
+}
+getName();
+console.log(x);
