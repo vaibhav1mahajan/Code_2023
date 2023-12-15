@@ -66,3 +66,18 @@ function getName(){
 }
 getName();
 console.log(x);
+
+Hoisting is phenonmenon in javascript by which you can access variable and function even before you have initialized it.
+
+Even before single line of code is executed , javascript provide memory to all variable and function 
+
+var getname = () =>{
+    console.log("Namaste Javascript");
+}
+
+or
+var getname2 = function(){
+    
+}
+
+In this case if we want to access getname without initialized it , it will give error because it behaves like a variable

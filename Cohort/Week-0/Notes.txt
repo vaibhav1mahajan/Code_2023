@@ -1,0 +1,7 @@
+What is browser?
+A browser, short for web browser, is a software application that enables users to access and interact with information on the World Wide Web.It renders www. It only understand HTML,Css and javascript
+What is World wide web?
+The World Wide Web (WWW or the Web) is a system of interconnected documents and resources that are accessed via the internet.
+
+What is HTML?
+It stand for hyper text markup language.It is the standard markup language for creating and designing web pages. It is the basic building block of the World Wide Web and is used to structure content on the internet.
