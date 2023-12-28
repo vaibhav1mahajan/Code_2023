@@ -18,32 +18,23 @@ const path = require('path');
 const app = express();
 
 app.get('/files',(req,res)=>{
-    const folderPath = `./files/`;
-    const files = fs.readdirSync(folderPath);
-    const filesCount =  files.filter(file => {
-        const filePath = path.join(folderPath,file);
-        return fs.statSync(filePath).isFile();
-    }) 
-    res.json(filesCount).status(200);
+  const folderPath = `./files/`;
+  const files = fs.readdirSync(folderPath);
+
+        // Filter out only files (not directories)
+        const fileCount = files.filter(file => {
+            const filePath = path.join(folderPath, file);
+            return fs.statSync(filePath).isFile();
+        }).length;
+        res.send(fileCount).status(200);
 })
+const folderPath = `./files/`;
+const files = fs.readdirSync(folderPath);
 
-app.get('/file/:filename',(req,res) =>{
-      const folderPath = `./files/`;
-      const fileName = req.params.filename;
-      const files = fs.readFileSync(folderPath);
-      for(let i =0;i<files.length;i++){
-        if(fileName===files[i]){
-          fs.readFile(fileName,'utf-8',(err,data)=>{
-            if(err) throw new Error;
-            res.status(200).json(data);
-          })
-        }
-      }
-      res.status(404);
-})
-app.all('*', (req, res) => {
-  res.status(404).send('Route not found');
-});
-
-
+      // Filter out only files (not directories)
+      const fileCount = files.filter(file => {
+          const filePath = path.join(folderPath, file);
+          return fs.statSync(filePath).isFile();
+      });
+      console.log(JSON.stringify(fileCount));
 module.exports = app;

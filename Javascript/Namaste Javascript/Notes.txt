@@ -46,7 +46,7 @@ Return meaning is to return the control of the program from where it was invoked
 
 Once the whole javascript code is finished its execution , the global execution is deleted
 
-It is a data structure that tracks the execution of a program, specifically the sequence of function calls and their corresponding return addresses. The call stack operates on a last-in, first-out (LIFO) basis, meaning that the last function called is the first one to be resolved.
+Call stack is a data structure that tracks the execution of a program, specifically the sequence of function calls and their corresponding return addresses. The call stack operates on a last-in, first-out (LIFO) basis, meaning that the last function called is the first one to be resolved.
 
 In javascript, in bottom of call stack global execution context is present
 Names of callstack are  
@@ -81,3 +81,35 @@ var getname2 = function(){
 }
 
 In this case if we want to access getname without initialized it , it will give error because it behaves like a variable
+
+-----------------------------------------------------------------------------------------
+
+Lecture:  04(How functions work in js)
+
+var x = 1;
+a();
+b();
+
+function a(){
+    var x = 10;
+    console.log(x);
+}
+
+function b(){
+    var x = 100;
+    console.log(x);
+}
+
+-----------------------------------------------------------------------------------------
+
+
+Lecture:  05(Shortest javascript program)
+
+Just save index.js file without writing any code in it and this is your Shortest javascript program.
+
+Even our file is empty this global object is created by engine
+
+A global object is created by javascript engine. In case of browser this global object also refer as this keyword , in other language this points to global object
+
+Global space is nothing , but any code you write in javascript which is not inside any function
+
