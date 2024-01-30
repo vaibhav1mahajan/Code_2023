@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t-->0){
+			int n ;
+            int m ;
+            cin>>n>>m;
+            int count = n+m;
+            if(count%2==0){
+                cout<<"Bob"<<endl;
+            } else{
+                cout<<"Alice"<<endl;
+            }
+	}
+	return 0;
+
+}

@@ -1,0 +1,32 @@
+1
+document.createElement("h1"):- this is the method to create createElement
+para.innerText = "This is a para created via DOM"
+document.body.appendChild(para);
+
+2
+var firstDiv = document.getElementById("first")
+const divs = document.getElementByTagname("div")
+const paras = document.getElementByClassName("intro");
+
+3
+const paras = document.querySelectorAll("p.intro"):- You can pass css selectors
+
+4
+div>p selects direct child
+
+
+5
+Property
+elements.innerHTML = new html content
+elements.attribute = new value
+elements.style.property = new style
+
+Method
+elements.setAttribute(attribute,value)
+
+6
+document.createElement
+document.removeChild
+document.appendChild
+document.replaceChild
+document.write

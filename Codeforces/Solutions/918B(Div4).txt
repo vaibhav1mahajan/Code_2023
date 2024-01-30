@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t-->0){
+			char arr[3][3];
+            int row = 0;
+            for(int i =0;i<3;i++){
+                for(int j =0;j<3;j++){
+                    cin>>arr[i][j];
+                    if(arr[i][j]=='?'){
+                        row = i;
+                    }
+                }
+            }
+            int a = 'A' + 'B' + 'C' + '?';
+            for(int i = 0;i<3;i++){
+                    a = a - arr[row][i];
+            }
+            cout<<(char)(a)<<endl;
+	}
+	return 0;
+
+}

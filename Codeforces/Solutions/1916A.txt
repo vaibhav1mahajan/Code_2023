@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t-->0){
+			int n ;
+            int m ;
+            cin>>n>>m;
+            double product = 1;
+            for(int i =0;i<n;i++){
+                int a ;
+                cin>>a;
+                product*=a;
+            }
+            // double a = (double)(2023/product);
+            // cout<<(2023/product)<<" "<<(a)<<endl;
+            if((2023/product)== (ceil(2023/product))){
+                cout<<"YES"<<endl;
+                for(int i =1;i<m;i++){
+                    cout<<1<<" ";
+                }
+                cout<<(2023/product)<<endl;
+            } else{
+                cout<<"NO"<<endl;
+            }
+	}
+	return 0;
+
+}

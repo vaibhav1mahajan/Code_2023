@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculateSum</title>
+</head>
+<body>
+    <input type="text" id="value1"></input><br><br>
+    <input type="text" id="value2"></input><br><br>
+    <button onclick="calculateSum()">CalculateSum</button>
+    <div id="demo"></div>
+     <script>
+        function calculateSum(){
+            const x = document.getElementById("value1").value;
+        const y = document.getElementById("value2").value;
+        const para = document.getElementById("demo");
+            console.log(x,y);
+            let z =  parseInt(x) + parseInt(y);
+            para.innerHTML = "Sum of numbers are" + z;
+        }
+     </script>
+</body>
+</html>

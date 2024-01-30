@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Principle" id="principle"><br><br>
+    <input type="text" placeholder="rate" id="rate"><br><br>
+    <input type="text" placeholder="time" id="time"><br><br>
+    <button onclick="amount()">See Amount</button>
+    <div id="demo"></div>
+    <script>
+        async function amount(){
+            const principle = document.getElementById("principle").value;
+            const rate = document.getElementById("rate").value;
+            const time = document.getElementById("time").value;
+            const div = document.getElementById("demo");
+            const response = await fetch("http://localhost:3000/interest?a=" + 
+            principle + "&b=" + rate + "&c=" + time);
+            const finalAns = await response.text();
+            demo.innerHTML = finalAns;
+        }
+    </script>
+</body>
+</html>
