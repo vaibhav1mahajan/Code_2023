@@ -1,0 +1,63 @@
+1-how to hung thread for 1 second
+
+function sleep(milliseconds) {
+  const start = new Date().getTime();
+  while (new Date().getTime() - start < milliseconds) {
+    // Blocking loop that consumes CPU resources
+  }
+}
+
+// Call sleep function to delay execution for 1 second
+sleep(1000);
+
+console.log('Delay complete');
+-------------------------------------------------------------------------------
+2- Why do we need async function
+because for example if fs.readfile wants to read some restricted files and it is not allowed by os then our javascript thread will hung
+-----------------------------------------------------
+
+3 - If you are wrapping any async function to make your own async function then also original async function will reach inside wep apis
+
+--------------------------------------------------------
+4- which type of communication is done by http protocol
+
+The HTTP (Hypertext Transfer Protocol) protocol is primarily used for client-server communication over the World Wide Web (WWW). It is a request-response protocol, which means it enables communication between a client (such as a web browser) and a server (such as a web server) by exchanging messages.
+
+------------------------------------------------------------------------
+
+5- What is ecmascript
+
+ECMAScript (European Computer Manufacturers Association Script) is a scripting language specification standardized by Ecma International. It is a standardized version of JavaScript.
+
+-----------------------------------------------------------------------------------
+
+6- HTTP protocol
+
+    Things clients(web browser) needs to worry about
+    1-Protocol (HTTP/HTTPS)
+    2-Address(Url/Ip/Port)
+    3-Routes
+    4-Headers/Body/QueryParams
+    5-Method
+
+    Things server needs to worry about
+    1-Response Headers
+    2-Response Body
+    3-Status code
+
+---------------------------------------------------------------------
+
+7- Common status code
+
+200- Everything is ok
+404- Page/Route not found
+403- Authentication issue
+500- Internal server error
+
+-------------------------------------------------------------------------------
+
+8- same ip address can be given to multiple backend servers, in order to distinguish when a ip is send instead of url is throuhg refferer which is present in headers
+
+-----------------------------------------------------------
+
+9- Express by default ignore body, in order to read body we need to use body-parser library this is because express js server needs to know what type of data you are sending in the body , so it know how to parse it(data may be json,binary etc)

@@ -45,10 +45,10 @@ app.post("/signin", function (req, res) {
 
   var token = jwt.sign({ username: username }, jwtPassword);
   return res.json({
-    token,
+    token:token
   });
 });
-
+// jwt.decode(jwtToken) which will decode the jwt c
 app.get("/users", function (req, res) {
   const token = req.headers.authorization;
   try {

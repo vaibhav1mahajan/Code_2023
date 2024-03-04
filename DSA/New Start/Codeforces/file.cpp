@@ -1,10 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 void Explainpair(){
-    pair<int, int> a = {1, 3};
-    cout<<a.first<<" "<<a.second;
-    pair<int , pair<int,int>> p = {1,{2,3}};
-    pair<int,int> arr[] = {{1,2},{3,4},{4,5}};
+    std::stack<int> myStack;
+
+    // Common methods of stack:
+
+    // 1. push(): Adds an element to the top of the stack
+    myStack.push(10);
+    myStack.push(20);
+    myStack.push(30);
+   std::stack<int> anotherStack;
+    anotherStack.push(100);
+    anotherStack.push(200);
+    myStack.swap(anotherStack);
+    std::cout << "Size of myStack after swap: " << myStack.size()<<anotherStack.top() << std::endl;
 }
 int main(){
 	int t;

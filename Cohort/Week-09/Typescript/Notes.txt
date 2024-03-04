@@ -1,0 +1,19 @@
+tsconfig.json helps you to complile ts file according to your need
+1. target specify , which version of js file you need , basically to which version i have to compile ts file
+2. rootDir : where ts compiler look for compilation
+3. outDir : where compiled js file will save
+4. noImplicitAny (true or false) : don't complain about type
+5. removeComments: remove all comments in js file
+
+
+Difference between types and interface
+
+1. You can't implements type to a class but you can implement interface
+2. Syntax of type 
+        type User = {
+            name:string
+        }
+    Syntax of interface
+        interface User {
+            name:string
+        }

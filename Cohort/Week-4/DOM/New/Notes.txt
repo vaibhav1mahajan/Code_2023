@@ -1,0 +1,1 @@
+oninput is the attribute to triger a function as input changes

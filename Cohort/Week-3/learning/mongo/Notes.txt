@@ -1,0 +1,6 @@
+Why we don't allow user to directly talk to databases?
+1-Small reason is that databases weren't created using protocols that browsers don't understand
+2-Big reason is that databases don't have granual access as a first class citizens. Very hard to do user specific access in them
+3- FireBase allowed userd directly talk
+
+SQL stands for structured query language

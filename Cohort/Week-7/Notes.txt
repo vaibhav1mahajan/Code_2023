@@ -1,0 +1,6 @@
+You must have to use useNavigate inside BrowserRouter 
+
+Context api is used to make syntax cleaner , not used for making re-rendering more performant
+
+What is state management?
+A cleaner way to store state of you app

@@ -24,3 +24,9 @@ DumbWay is to ask user to send username and password in all request as headers
 Slightly better way is to give token when user singin or signup and ask user to send token in all future request and forget it when user logs out
 
 // use to app.use and pass two middleware and check which one is call first
+
+
+Try out
+1- explore zod if there any required field
+2- const middleware = [express.json(),userValidator]
+    app.get('/',...middlewares,(req,res))

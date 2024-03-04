@@ -45,5 +45,27 @@
   const app = express();
   
   app.use(bodyParser.json());
+
+  const todos = [];
+
+  app.get('/todos',(req,res)=>{
+    res.status(200).send(todos);
+  })
+
+
+  app.get('todos/:id',(req,res)=>{
+    const id = req.params.id;
+    for(let i =0;i<todos.length;i++){
+      if(todos[i]["id"]==parseInt(id)){
+        res.status(200).json(todos[i]);
+        return;
+      }
+    }
+    res.status(404);
+  })
+
+  app.post('todos',(req,res)=>{
+
+  })
   
   module.exports = app;

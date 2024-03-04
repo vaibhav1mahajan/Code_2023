@@ -1,0 +1,40 @@
+If a parenet re-render all child will 100% re-render
+
+const [count, setCount] = useState(0);
+setCount(count+1); // this is a async call
+if you do this it will only update count to 1.
+<button onClick={()=>{
+      setCount(count+1);
+      setCount(count+1);
+     }}> count {count}</button>
+    </>
+If you want to update count to 2 then you have to do this
+ <button onClick={()=>{
+      setCount((c)=>{
+        return c+1
+      });
+      setCount((count)=>{
+        return count+1
+      });
+     }}> count {count}</button>
+
+
+Jargons need to know
+1-Side effect 
+    In React, side effects refer to any code that interacts with the outside world, such as fetching data from a server, manually changing the DOM, subscribing to events, or setting timers. These operations are typically asynchronous and can cause the application state to change in ways that are not directly traceable through React's rendering cycle.
+    Example: setTimeout,setInterval,fetch,directly manipulating the dom
+
+2-Hooks:
+    1:useState-lets you describe the state of your app, any time the states changes it triggers a re-render
+
+    2:useEffect is one of the most commonly used hooks in React. It allows you to perform side effects in functional components. Side effects are operations that affect things outside the scope of the component, such as fetching data from an API, subscribing to events, or manually changing the DOM.
+    dependencies array take state variable 
+    The functional argument of useEffect can't be async
+    You can do it via two ways  
+        1-wrap async function into normal function but it could be dangeours because any time our state variable changes then a request goes out and in that time before our await request resolve if again our count variable changes and second await request goes out and second reqeust resolve first then it could be a problem
+        2-use useasynceffect library (name may be wrong) 
+
+    3:useMemo:Without usememo , the problem is that every time our button is clicked (see hook-3 example) the whole expensive operation is performed (for loop) even without our inputValue changes. To avoid this we use useMemo which does render only if particular state variable changes unless it won't run
+
+    4: useCallback is a hook in React, a popular JavaScript library for building user interfaces. It is used to memoize functions, which can help in optimizing the performance of your application, especially in cases involving child components that rely on reference equality to prevent unnecessary renders.
+    If we pass function as props then it will re-render even if our component is wrapped inside memo, that's where useCallback comes into picture

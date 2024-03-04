@@ -1,0 +1,21 @@
+Hashing
+No decryption is there (1way) doesn't require password
+
+Encryption
+we can convert random string into password back provided we have key (2 way)
+
+
+Json web token
+Takes json as input, creates a token, not hashed not protected
+Anyone as token can see the json
+Anyone can convert it but only backend server is verify it
+It's technically a digital signature
+
+Databases
+Why do we need them?
+In in memory database if our server crashes then our all updated data will be lossed
+
+Architecture of Databases
+1-users hit the backend
+2-backend hits the database
+3- user don't have access to the databases/ can't talk to db

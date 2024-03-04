@@ -1,0 +1,7 @@
+Why server side rendering?
+Problems: 1-Waterfalling 
+            In terms of rendering, "waterfalling" typically refers to the sequential execution of tasks or processes, often in a top-down manner.
+
+            In the context of web development and rendering, waterfalling can refer to the process of rendering a web page where tasks are executed one after the other in a sequential manner, usually starting from the initial request for the web page and ending with the complete rendering of the page in the user's browser.
+
+2-
